@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description"><em>Thank you for taking time to complete this survey</em></p>
+    <form method="POST" id="survey-form">
+      <fieldset>
+        <label for="name" id="name-label">Name<input type="text" id="name" name="name" placeholder="Enter your name" class="text-input" required /></label>
+        <label for="email" id="email-label">Email<input type="email" id="email" name="email" placeholder="Enter your email" class="text-input" required /></label>
+        <label for="number" id="number-label">Number<input type="number" id="number" name="number" min="10000000000" max="19999999999" placeholder="Enter your phone number" class="text-input" required /></label>
+      </fieldset>
+      <fieldset>
+        <legend>How did you know about us?</legend>
+          <select id="dropdown" class="text-input">
+            <option value="">(select one)</option>
+            <option value="1">social media</option>
+            <option value="2">advertisment</option>
+            <option value="3">friends</option>
+            <option value="4">other</option>
+          </select>
+      </fieldset>
+      <fieldset>
+        <legend>Please rate us</legend>
+        <label for="five"><input id="five" type="radio" name="score" value="five" class="inline" checked /> 5</label>
+        <label for="four"><input id="four" type="radio" name="score" value="four" class="inline" /> 4</label>
+        <label for="three"><input id="three" type="radio" name="score" value="three" class="inline" /> 3</label>
+        <label for="two"><input id="two" type="radio" name="score" value="two" class="inline" /> 2</label>
+        <label for="one"><input id="one" type="radio" name="score" value="one" class="inline" /> 1</label>
+      </fieldset>
+      <fieldset>
+        <legend>Where would you like us to improve?</legend>
+        <label for="service-attitude"><input id="service-attitude" type="checkbox" name="improve" value="service-attitude" class="inline" /> Service attitude</label>
+        <label for="taste"><input id="taste" type="checkbox" name="improve" value="taste" class="inline" /> Taste</label>
+        <label for="serving-speed"><input id="serving-speed" type="checkbox" name="improve" value="serving-speed" class="inline" /> Serving speed</label>
+        <label for="page-beauty"><input id="page-beauty" type="checkbox" name="improve" value="page-beauty" class="inline" /> Page beauty</label>
+        <label for="suggestions" class="comment">Any comments or suggestions?
+          <textarea id="suggestions" name="suggestions" rows="4" cols="30" placeholder="I think you can..." class="text-input"></textarea>
+      </fieldset>
+      <input type="submit" id="submit" value="submit" class="text-input" />
+    </form>
+  </body>
+</html>
